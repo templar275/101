@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<link rel="stylesheet/less" href="css/index.less">
+<script src="js/less-2.5.3.min.js"></script>
+<!-- 计算rem -->
+<script>
+    ~function(){
+        function computed(){
+            let HTML=document.documentElement,
+                deviceW=HTML.clientWidth,
+                designW=750,
+                ratio=deviceW/designW*100;
+                // 重新算比例,如果设计稿大于750，比例为100
+            if(deviceW>=designW){
+                ratio=100;
+            }
+            HTML.style.fontSize=ratio+"px"; 
+        }
+        computed();
+    }();
+
+</script>
+<script src="js/prefixfree.min.js"></script>
+<body>
+
+
+<main class="container">
+    <!-- 魔方区域 -->
+    <section class="cubeBox">
+        <ul class="cube">
+            <li><img src="img/zf_cube1.png" alt=""></li>
+            <li><img src="img/zf_cube2.png" alt=""></li>
+            <li><img src="img/zf_cube3.png" alt=""></li>
+            <li><img src="img/zf_cube4.png" alt=""></li>
+            <li><img src="img/zf_cube5.png" alt=""></li>
+            <li><img src="img/zf_cube6.png" alt=""></li>
+            <li><img src="img/zf_cube7.png" alt=""></li>
+        </ul>
+        <span class="tip"></span>
+    </section>
+
+    <!-- 滑屏区域 -->
+    <section class="swiperBox">
+        <a href="javscript:;" class="return"></a>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide page1">
+                    <dl class="base">
+                        <p></p>
+                        <dt>自我介绍</dt>
+                        <dd><em>01</em><p>姓名：</p></dd>
+                        <dd><em>02</em><p>性別：</p></dd>
+                        <dd><em>03</em><p>年齡：</p></dd>
+                        <dd><em>04</em><p>学历：</p></dd>
+                        <dd><em>05</em><p>戶籍：</p></dd>
+                        <dd><em>06</em><p>工作年限：</p></dd>
+                        <dd><em>07</em><p>邮箱：</p></dd>
+                        <dd><em>08</em><p>电话：</p></dd>
+                        <dd><em>09</em><p>技能：</p></dd>
+                    </dl>
+                </div>
+                <div class="swiper-slide page2">
+                    <img src="img/zf_course1.png" alt="">
+                    <img src="img/zf_course2.png" alt="">
+                    <img src="img/zf_course3.png" alt="">
+                    <img src="img/zf_course4.png" alt="">
+                    <img src="img/zf_course5.png" alt="">
+                    <img src="img/zf_course6.png" alt="">
+                    <img src="img/zf_course.png" alt="">
+                </div>
+                <div class="swiper-slide page3">3</div>
+                <div class="swiper-slide page4">4</div>
+                <div class="swiper-slide page5">5</div>
+                <div class="swiper-slide page6">6</div>
+            </div>
+        </div>
+    </section>
+    <!-- 音乐区域-->
+    <section class="musicBox">
+        <audio src="music.mp3" loop class="audio" preload="none"></audio>
+        <a href="javascript:;" class="icon move"></a>
+    </section>
+
+
+
+</main>
+
+
+
+
+<script src="zepto.min.js"></script>
+<script src="js/swiper.js"></script>
+<script src="js/makisu.min.js"></script>
+<script src="index.js"></script>
+
+
+
+
+
+
+    
+</body>
+</html>
